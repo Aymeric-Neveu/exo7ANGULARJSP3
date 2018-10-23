@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr" ng-app="testApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercice 7</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </head>
+<body>
+<div ng-controller="phonesCtrl" class="col-2 offset-5 jumbotron">
+  <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
+    <thead>
+      <th>Modèle</th>
+      <th>Marque</th>
+    </thead>
+    <tr ng-repeat="phone in phones | orderBy: 'phoneModel'">
+      <td>
+        {{phone.phoneModel}}
+      </td>
+      <td>
+        {{phone.brand}}
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
